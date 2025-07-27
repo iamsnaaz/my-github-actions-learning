@@ -1,0 +1,21 @@
+name: CICD
+on: 
+  push:
+    branches:
+      - dev
+jobs:
+  build-test-deploy:
+    runs-on:  ubuntu-latest
+    steps:
+      - name: Source code checkout
+        uses: actions/checkout@v2
+      - name: Setup Node.js
+        id: setup-node
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: .node-version
+          cache: npm
+      - run: npm install
+      - run: npm run build 
+      
+      
