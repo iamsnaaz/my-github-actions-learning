@@ -1,0 +1,12 @@
+name:  hello-eorld
+on:  push
+jobs:
+  hello-wolrd-job:
+    runs-on:  ubuntu-latest
+    steps:
+      - name:  checkout of repository code
+        uses:  actions/checkout@v3
+      - run:  echo "Heello world! \n This is my first project in GITHUB ACTIONS"
+      
+  
+  
