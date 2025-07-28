@@ -65,4 +65,5 @@ jobs:
 
       - name: deploy
         id: deployment
-        uses: actions/upload-pages-artifact@v2
+        uses: actions/upload-pages-artifact@v3
+
