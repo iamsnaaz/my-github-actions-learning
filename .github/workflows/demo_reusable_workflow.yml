@@ -5,4 +5,4 @@ jobs:
   demo-job:
     uses: iamsnaaz/my-github-actions-learning/.github/workflows/demo.yml@main
     with:
-      username: Sadiyanaaz
+      username:  'Sadiyanaaz'
