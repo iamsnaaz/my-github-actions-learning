@@ -1,6 +1,11 @@
+name: Run Reusable Workflow
+
+on:
+  workflow_dispatch
+  
 jobs:
   my-job:
-    uses: iamsnaaz/my-github-actions-learning/.github/workflows/reusable-workflow.yml
+    uses: iamsnaaz/my-github-actions-learning/.github/workflows/reusable_workflow.yml@main
     with:
       node-version: '18.x'
     
