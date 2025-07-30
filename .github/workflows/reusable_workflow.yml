@@ -1,10 +1,11 @@
 name:  build-test-deploy
 on: 
   workflow_call:
-    node-version:
-      description: "Node version"
-      required: true
-      type: string
+    inputs:
+      node-version:
+        description: "Node version"
+        required: true
+        type: string
 jobs:
   build:
     runs-on:  ubuntu-latest
