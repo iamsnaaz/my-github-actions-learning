@@ -3,6 +3,6 @@ on:
   workflow_dispatch:
 jobs:
   demo-job:
-    uses: iamsnaaz/my-github-actions-learning/.github/workflows/demo.yml@main
+    uses: iamsnaaz/my-github-actions-learning/.github/workflows/demo.yml@feature
     with:
       username:  'Sadiyanaaz'
