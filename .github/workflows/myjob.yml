@@ -1,0 +1,6 @@
+jobs:
+  my-job:
+    uses: iamsnaaz/my-github-actions-learning/.github/workflows/reusable-workflow.yml
+    with:
+      node-version: '18.x'
+    
