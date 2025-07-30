@@ -1,8 +1,0 @@
-name: demo_reusable
-on:
-  workflow_dispatch:
-jobs:
-  demo-job:
-    uses: iamsnaaz/my-github-actions-learning/.github/workflows/demo.yml@main
-    with:
-      username:  'Sadiyanaaz'
