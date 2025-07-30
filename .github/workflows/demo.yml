@@ -10,7 +10,7 @@ jobs:
   print_messadge:
     runs-on: ubuntu-latest
     steps:
-    - name: Prnt the user name to the STDOUT
+    - name: Prnt the user name to STDOUT
       run: echo "username is ${{inputs.username}}"
     
         
