@@ -62,9 +62,6 @@ jobs:
         uses: actions/upload-artifact@v4
         with: 
           path: out
-          
-      - name: List directory contents
-        run: ls -la
 
       - name: deploy
         id: deployment
