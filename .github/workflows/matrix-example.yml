@@ -12,7 +12,7 @@ env:
 
 jobs:
   docker:
-    runs-on: ubuntu-latest
+    runs-on: [ubuntu-latest, windows-latest]
     steps:
       - name: Docker Build
         run: echo docker build -t ${{ env.CONTAINER_REGISTRY }}/${{ vars.DOCKER_USERNAME }}/${{ env.IMAGE_NAME }}:latest
@@ -27,7 +27,7 @@ jobs:
     needs: docker
     concurrency:
       group: production-deployment
-      cancel-in-progress: false
+      cancel-in-progress: true
     runs-on: ubuntu-latest
     steps:
       - name: Docker Run
@@ -35,3 +35,5 @@ jobs:
 
           echo docker run -d -p 8080:80 ${{ env.CONTAINER_REGISTRY }}/${{ vars.DOCKER_USERNAME }}/${{ env.IMAGE_NAME }}:latest
           sleep 600s
+
+  
