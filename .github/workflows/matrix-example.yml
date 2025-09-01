@@ -16,12 +16,12 @@ jobs:
             os: windows-latest
         include:
           - image: amd64/alpine
-            os: windows-latest
-
+            os: ubuntu-latest
     runs-on: ${{ matrix.os }}
     steps: 
       - name: Echo Docker Info
         run: docker info
       - name: Run Docker Image on ${{ matrix.os }}
         run: docker run ${{ matrix.image }}
+
      
