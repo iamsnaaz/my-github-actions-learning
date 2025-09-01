@@ -3,16 +3,19 @@ on:
   workflow_dispatch:
   push:
 
-env:
-  CONTAINER_REGISTRY: docker.io
-  IMAGE_NAME: github-actions-nginx
-
 jobs:
   docker:
     strategy:
        matrix:
         os: [ubuntu-latest,ubuntu-20.04,windows-latest] 
         image: [hello-world, alpine]
+        exclude:
+          - image : alpine
+            os: windows-latest
+        include:
+          - image: amd64/alpine
+            os: windows-latest
+
     runs-on: ${{ matrix.os }}
     steps: 
       - name: Echo Docker Info
